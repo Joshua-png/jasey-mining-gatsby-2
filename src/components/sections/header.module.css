@@ -1,0 +1,29 @@
+.header{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.blackOverlay{
+    display: flex;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 100% ;
+    margin: 0 auto;
+}
+
+.inner{
+    margin: 0 auto;
+    line-height: 10;
+}
