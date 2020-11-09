@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-import logo1 from '../../../images/logo1.jpg';
+import logo1 from '../../../images/logo.jpg';
 import { Container } from '@components/global';
 import {
   Nav,
