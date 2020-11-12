@@ -12,6 +12,7 @@ import Faq from '@sections/Faq';
 import Footer from '@sections/Footer';
 import WhoWeArey from '@sections/WhoWeAre';
 import Clients from '../components/sections/Clients';
+import WhatWeDo from '../components/sections/WhatWeDo';
 
 const IndexPage = () => (
   <Layout>
@@ -20,6 +21,7 @@ const IndexPage = () => (
     <Header />
     <WhoWeArey />
     <Clients />
+    <WhatWeDo />
     <About />
     <Brands />
     <Team />

@@ -1,5 +1,4 @@
 import React from "react";
-import Scrollspy from 'react-scrollspy';
 import {Link} from 'react-scroll';
 import {
     Grid,
@@ -96,16 +95,7 @@ const DesktopHeader = () => {
     //     setActive(path);
     // }, [path])
 
-    return (
-        <Scrollspy
-                    // scrollTargetIds={["section_1"]}
-                    items={ ['about', 'section_2', 'section_3'] }
-                    currentClassName="active"
-                    offset={-64}
-                    // activeNavClass="is-active"
-                    // scrollDuration="1000"
-                    // headerBackground="true"
-                >           
+    return (       
         <Toolbar >
             <Grid container={true} justify="space-around" alignItems="center">
                 <Grid item={true} lg={3} container={true} >
@@ -198,8 +188,7 @@ const DesktopHeader = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </Toolbar>
-    </Scrollspy>   
+        </Toolbar>  
     )
 }
 
