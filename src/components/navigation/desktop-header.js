@@ -58,7 +58,7 @@ const DesktopHeader = () => {
                 }
             },
             orange:{
-                color:'orange',
+                color:'red !important',
             },
             button: {
                 backgroundColor: "transparent",
@@ -162,10 +162,11 @@ const DesktopHeader = () => {
                             <strong className="nav-item" style={styles}>
                             <Link 
                                 className={classes.green} 
-                                activeClassName={classes.icon}
+                                activeClass="orange"
                                 to="faq" 
-                                smooth={true} 
+                                smooth='easeInQuad' 
                                 duration={1000}
+                                spy={true}
                             >
                                 Gallery
                             </Link> 
