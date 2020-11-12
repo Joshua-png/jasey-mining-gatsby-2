@@ -52,9 +52,17 @@ const DesktopHeader = () => {
             },
             green:{
                 color:"green",
+                '&:hover':{
+                    color:'orange',
+                    textDecoration: 'none',
+                }
+            },
+            orange:{
+                color:'orange',
             },
             button: {
-                backgroundColor: "transparent"
+                backgroundColor: "transparent",
+                border: 'none',
             },
             divider: {
                 marginTop: 8,
@@ -152,7 +160,15 @@ const DesktopHeader = () => {
                             variant="text"
                             size="small">
                             <strong className="nav-item" style={styles}>
-                            <Link className={classes.green} to="faq" smooth={true} duration={1000}>Gallery</Link> 
+                            <Link 
+                                className={classes.green} 
+                                activeClassName={classes.icon}
+                                to="faq" 
+                                smooth={true} 
+                                duration={1000}
+                            >
+                                Gallery
+                            </Link> 
                                {/* <a href="#section_2" className={classes.green}>Gallery</a> */}
                             </strong>
                         </Button>

@@ -10,12 +10,14 @@ import Brands from '@sections/Brands';
 import Team from '@sections/Team';
 import Faq from '@sections/Faq';
 import Footer from '@sections/Footer';
+import WhoWeArey from '@sections/WhoWeAre';
 
 const IndexPage = () => (
   <Layout>
     <Layouts />
     {/* <Navbar /> */}
     <Header />
+    <WhoWeArey />
     <About />
     <Brands />
     <Team />

@@ -1,3 +1,42 @@
 ul{
     margin-bottom: 0;
 }
+
+.site-section {
+    padding: 2.5em 0; 
+}
+
+@media (min-width: 768px) {
+      .site-section {
+        padding: 2em 0; 
+    }
+}
+
+.site-section.site-section-sm {
+      padding: 4em 0; 
+}
+  
+.site-section-heading {
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    font-size: 2.5rem; 
+}
+    
+@media (min-width: 768px) {
+      .site-section-heading {
+        font-size: 3rem; 
+    }
+ }
+
+.section-title {
+    color: #04ba32;
+    font-size: 40px;
+    font-weight: 500px;
+}
+    
+@media (max-width: 991.98px) {
+      .section-title {
+        font-size: 30px; 
+      }
+ }

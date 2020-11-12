@@ -7,9 +7,6 @@ const normalize = `
 const GlobalStyles = createGlobalStyle`
   ${normalize};
 
-  body {
-    font-family: 'source sans pro';
-  }
 
   h1, h2, h3, p {
     margin: 0;
