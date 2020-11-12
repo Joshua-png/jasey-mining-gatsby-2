@@ -7,13 +7,13 @@ import Missions from '../common/Mission/Missions';
 
 const WhoWeArey = () => {
   return(
-    <div className="site-section cta-big-image" id="about-section">
-    <div className="container">
-         <WhoWeAre />
-         <Dots />
-         <Circle />
-         <Missions />
-     </div> 
+    <div className="site-section cta-big-image" id="about-us">
+      <div className="container">
+          <WhoWeAre />
+          <Dots />
+          <Circle />
+          <Missions />
+      </div> 
   </div>   
   );
 }

@@ -124,9 +124,16 @@ const DesktopHeader = () => {
                             className={classes.button}
                             variant="text"
                             size="small">
-                            <strong className="nav-item" style={styles}>
-                               <Link to="/" className={classes.green}>Home</Link>
-                            </strong>
+                           <strong>     
+                               <Link 
+                                 className={classes.green} 
+                                 to="home" 
+                                 smooth='easeInQuad'
+                                 duration={1000}
+                               >
+                                   Home
+                               </Link> 
+                            </strong>   
                         </Button>
                     </Grid>
 
@@ -137,7 +144,14 @@ const DesktopHeader = () => {
                             size="small">
                                 
                             <strong className="nav-item" style={styles}>
-                               <Link className={classes.green} to="about" smooth={true} duration={1000}>About Us</Link> 
+                               <Link 
+                                 className={classes.green} 
+                                 to="about-us" 
+                                 smooth='easeInQuad'
+                                 duration={1000}
+                               >
+                                   About Us
+                               </Link> 
                                {/* <a href="#about" className={classes.green}>About Us</a> */}
                             </strong>
                         </Button>
@@ -153,7 +167,7 @@ const DesktopHeader = () => {
                             <Link 
                                 className={classes.green} 
                                 activeClass="orange"
-                                to="faq" 
+                                to="gallery" 
                                 smooth='easeInQuad' 
                                 duration={1000}
                                 spy={true}
@@ -170,9 +184,14 @@ const DesktopHeader = () => {
                             className={classes.button}
                             variant="text"
                             size="small">
-                           <strong className="nav-item" style={styles}>
-                               <a href="#section_3" className={classes.green}>Services</a>
-                            </strong>
+                           <Link 
+                                 className={classes.green} 
+                                 to="services" 
+                                 smooth='easeInQuad'
+                                 duration={1000}
+                               >
+                                  Services
+                            </Link> 
                         </Button>
                     </Grid>
 
@@ -181,9 +200,14 @@ const DesktopHeader = () => {
                             className={classes.button}
                             variant="text"
                             size="small">
-                           <strong className="nav-item" style={styles}>
-                               <a href="#section_4" className={classes.green}>Contact</a>
-                            </strong>
+                           <Link 
+                                 className={classes.green} 
+                                 to="contact-us" 
+                                 smooth='easeInQuad'
+                                 duration={1000}
+                               >
+                                  contact us
+                            </Link> 
                         </Button>
                     </Grid>
                 </Grid>

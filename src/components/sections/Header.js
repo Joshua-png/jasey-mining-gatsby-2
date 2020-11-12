@@ -19,6 +19,7 @@ function Header() {
   `)
 
   return (
+  <section id="home">  
     <BackgroundImage
             Tag="section"
             fluid={data.background.childImageSharp.fluid}
@@ -37,6 +38,7 @@ function Header() {
             </div>
             
     </BackgroundImage>
+  </section>  
   )
 }
 
