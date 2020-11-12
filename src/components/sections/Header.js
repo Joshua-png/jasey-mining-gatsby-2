@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image';
 import HeaderStyle from './header.module.css';
 import styled from "styled-components";
+import Button from 'react-bootstrap/Button'
 
 function Header() {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ function Header() {
                 <div className={HeaderStyle.inner}>
                   <StyledH1 className="mb-3">JASEY MINING SERVICES</StyledH1>
                   <StyledH3>Optimizing the blasting experience for our clients</StyledH3>
+                  <Button variant="outline-success" size="lg">Get In Touch</Button>
                 </div>
                   
               </div>
@@ -42,7 +44,12 @@ export default Header;
  
 const StyledH1 = styled.h1`
   font-size : 6rem;
+
+  @media (max-width: 768px) {
+    font-size : 3rem;
+  }
 `
 const StyledH3 = styled.h3`
   font-size : 1.2rem;
+  margin-bottom: 0;
 `

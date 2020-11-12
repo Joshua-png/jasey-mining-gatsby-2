@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Ajay NS <ajay.ns@outlook.com>",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@svgr/webpack": "^4.1.0",
     "bootstrap": "^4.5.3",
     "gatsby": "^2.0.76",
@@ -27,6 +29,8 @@
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
     "react-scrollspy": "^3.3.5",
     "styled-components": "^4.1.3"
   },
