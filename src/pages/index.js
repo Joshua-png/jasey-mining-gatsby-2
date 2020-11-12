@@ -14,6 +14,7 @@ import WhoWeArey from '@sections/WhoWeAre';
 import Clients from '../components/sections/Clients';
 import WhatWeDo from '../components/sections/WhatWeDo';
 import Project from '../components/sections/Project';
+import Gallery from '../components/sections/Gallery';
 
 const IndexPage = () => (
   <Layout>
@@ -23,6 +24,7 @@ const IndexPage = () => (
     <WhoWeArey />
     <Clients />
     <WhatWeDo />
+    <Gallery />
     <Project />
     <About />
     <Brands />

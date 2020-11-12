@@ -60,9 +60,9 @@ export default function EachProject({image,alternate,display}) {
   return (
     <div>
       <div className="col mb-4">
-        <div className="card h-100">
-          <img src={image} className="card-img-top shadow" alt={alternate} onClick={handleClickOpen}/> 
-        </div>
+        <button className="card h-100" onClick={handleClickOpen}>
+          <img src={image} className="card-img-top shadow" alt={alternate}/> 
+        </button>
       </div>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
