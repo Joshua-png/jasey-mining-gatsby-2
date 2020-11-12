@@ -47,3 +47,23 @@ ul{
     color: #000; 
     font-weight: 500;
 }
+
+/*Clients*/
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto !important;
+    text-align: center; 
+}
+
+@media (max-width: 991.98px) {
+    .testimonial blockquote {
+        font-size: 1rem; 
+    } 
+}
+    
+.testimonial figure img {
+      width: 250px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 10%;
+}
