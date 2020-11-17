@@ -4,6 +4,7 @@ import BackgroundImage from 'gatsby-background-image';
 import HeaderStyle from './header.module.css';
 import styled from "styled-components";
 import Button from 'react-bootstrap/Button'
+import { Link } from "react-scroll";
 
 function Header() {
   const data = useStaticQuery(graphql`
@@ -30,7 +31,16 @@ function Header() {
                 <div className={HeaderStyle.inner}>
                   <StyledH1 className="mb-3">JASEY MINING SERVICES</StyledH1>
                   <StyledH3>Optimizing the blasting experience for our clients</StyledH3>
-                  <Button variant="outline-success" size="lg">Get In Touch</Button>
+                  <Button variant="outline-success" size="lg">
+                    <Link
+                      // className={classes.green} 
+                      to="contact-us"
+                      smooth='easeInQuad'
+                      duration={1000}
+                    >
+                      Get In Touch
+                    </Link>
+                  </Button>
                 </div>
                   
               </div>
