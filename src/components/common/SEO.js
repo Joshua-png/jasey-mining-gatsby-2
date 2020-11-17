@@ -6,7 +6,7 @@ const SEO_DATA = {
   title: 'Jasey Mining',
   url: '',
   author: 'sterde',
-  keywords: ['Jasey', 'mining', 'limited'],
+  keywords: ['Jasey', 'mining', 'limited','services'],
   img: '',
   twitterId: '',
   facebookId: '',
