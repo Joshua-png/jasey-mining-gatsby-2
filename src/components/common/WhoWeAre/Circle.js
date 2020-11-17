@@ -37,18 +37,18 @@ export default function Circle(){
 //     }
 //   }
 
-const text = <div id="js" className="p-4" style={{border: '2px solid #04ba32', borderRadius:'30px'}}>
-      <p style={{textAlign: 'justify'}}>Our company is the sole distributor for the popular airbag, BLASTBAG EVO in the West Africa sub-region. BLASTBAG EVO is applicable in both surface and underground operations. JMSL works in partnership with
+const text = <div id="js" className="text-justify">
+      {`Our company is the sole distributor for the popular airbag, BLASTBAG EVO in the West Africa sub-region. BLASTBAG EVO is applicable in both surface and underground operations. JMSL works in partnership with
       RIPLOG, which is a member of the MTI group company in Australia. To authenticate our partnership, kindly follow the link (www.mtigroup.com.au) and check out their partners for the West African region. JMSL also sells: Blast hole liners,
-      blast cones, blast balls, survey chains, boom Ute magazines, etc.</p>
-
-      <p style={{textAlign: 'justify'}}>JMSL’s range of products and services allows our clients to optimize their blasting efforts, which leads to an increase in production at the mine pit. We also provide our clients with the opportunity to
+      blast cones, blast balls, survey chains, boom Ute magazines, etc.`}
+      <br /><br />
+      {`JMSL’s range of products and services allows our clients to optimize their blasting efforts, which leads to an increase in production at the mine pit. We also provide our clients with the opportunity to
       access world-className blasting
-      tools, products, techniques, and as well as offer cost-saving as our product and services yields increase efficiency, effectiveness, and reliability.</p>
-
-      <p style={{textAlign: 'justify'}}>Over the years, JMSL has had the opportunity to work with the following clients: Engineers and Planner, Golden Star Resources – Wassa Mine, Newmont Ghana Gold Limited (NGGL – Ahafo Project), Newmont Golden
-      Ridge Limited (NGRL – Akyem Project), African Underground Mining Services (AUMS), African Mining Services-Mali, Adamus Resource Limited, Goldfields Tarkwa Mine, Anglogold Ashanti – Iduapriem Mine and many more.
-
-      <br />JMSL believes in long term win-win relationships. It enables us to support our clients through the ups and downs of an ever-changing micro and macroeconomic environment.
-      </p>
+      tools, products, techniques, and as well as offer cost-saving as our product and services yields increase efficiency, effectiveness, and reliability.`}
+      <br /><br />
+      {`Over the years, JMSL has had the opportunity to work with the following clients: Engineers and Planner, Golden Star Resources – Wassa Mine, Newmont Ghana Gold Limited (NGGL – Ahafo Project), Newmont Golden
+      Ridge Limited (NGRL – Akyem Project), African Underground Mining Services (AUMS), African Mining Services-Mali, Adamus Resource Limited, Goldfields Tarkwa Mine, Anglogold Ashanti – Iduapriem Mine and many more.`}
+      <br /><br />
+      {`JMSL believes in long term win-win relationships. It enables us to support our clients through the ups and downs of an ever-changing micro and macroeconomic environment.
+      `}
 </div>

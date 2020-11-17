@@ -33,7 +33,6 @@ function Header() {
                   <StyledH3>Optimizing the blasting experience for our clients</StyledH3>
                   <Button variant="outline-success" size="lg">
                     <Link
-                      // className={classes.green} 
                       to="contact-us"
                       smooth='easeInQuad'
                       duration={1000}
