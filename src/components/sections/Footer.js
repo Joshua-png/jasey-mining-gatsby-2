@@ -1,126 +1,164 @@
-import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from "react";
+import {Container, Grid, Typography, Button, Divider} from "@material-ui/core";
+import {makeStyles} from "@material-ui/styles";
+import {Link} from 'react-scroll';
 
-import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+const Footer = () => {
+    const useStyles = makeStyles(theme => {
+        return {
+            root: {
+                paddingTop: 32,
 
-import GithubIcon from '@static/icons/github.svg';
-import InstagramIcon from '@static/icons/instagram.svg';
-import TwitterIcon from '@static/icons/twitter.svg';
-
-const SOCIAL = [
-  {
-    icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
-  },
-  {
-    icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
-  },
-  {
-    icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
-  },
-];
-
-const Footer = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_pot: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            },
+            green:{
+                color: 'green'
+            },
+            main: {
+                backgroundColor: "black",
+                paddingTop: 32,
+                paddingBottom: 16
+            },
+            link: {
+                textDecoration: "none",
+                width: "100%",
+                color: "white",
+                '&:hover':{
+                  color:'green',
+                  textDecoration: 'none',
+                }
+            },
+            button: {
+                textAlign: "left",
+                color: "white",
+                fontSize: 12
+            },
+            title: {
+                color: "white"
+            },
+            divider: {
+                marginTop: 8,
+                marginBottom: 8
+            },
+            copyright: {
+                paddingTop: 16,
+                paddingBottom: 16,
+                backgroundColor: "ash"
+            },
+            location: {
+                color: "white"
             }
-          }
         }
-      }
-    `}
-    render={data => (
-      <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
-          />
-        </Art>
-        <FooterWrapper>
-          <StyledContainer>
-            <Copyright>
-              <h2>Absurd</h2>
-              <span>
-                Illustrations by
-                {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
-                  @diana_valeanu
-                </ExternalLink>
-              </span>
-            </Copyright>
-            <SocialIcons>
-              {SOCIAL.map(({ icon, link }) => (
-                <ExternalLink key={link} href={link}>
-                  <img src={icon} alt="link" />
-                </ExternalLink>
-              ))}
-            </SocialIcons>
-          </StyledContainer>
-        </FooterWrapper>
-      </React.Fragment>
-    )}
-  />
-);
+    });
 
-const SocialIcons = styled.div`
-  display: flex;
+    const classes = useStyles();
 
-  img {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-  }
+    return (   
+        <div>
+            <div className={classes.main}>
+                <Container>
+                    <Grid container={true} spacing={5} justify="space-between">
+                        <Grid item={true} xs={12} md={4}>
+                            <Typography className={classes.title}>Links</Typography>
+                            <Divider variant="fullWidth" className={classes.divider}/>
+                              <Button fullWidth={true} variant="text" size="small" className={classes.button}> 
+                                <Link 
+                                  className={classes.link}
+                                  to="home" 
+                                  smooth='easeInQuad'
+                                  duration={1000}
+                                >
+                                    HOME
+                                </Link>
+                              </Button >   
+                            
+                            <Button fullWidth={true} variant="text" size="small" className={classes.button}>
+                                <Link 
+                                 className={classes.link} 
+                                 to="about-us" 
+                                 smooth='easeInQuad'
+                                 duration={1000}
+                               >
+                                   About Us
+                               </Link> 
+                            </Button>
+                            <Button fullWidth={true} variant="text" size="small" className={classes.button}>
+                                <Link 
+                                  className={classes.link} 
+                                  activeClass="orange"
+                                  to="gallery" 
+                                  smooth='easeInQuad' 
+                                  duration={1000}
+                                  spy={true}
+                               >
+                                  Gallery
+                                </Link> 
+                            </Button>
+                            <Button fullWidth={true} variant="text" size="small" className={classes.button}>
+                                <Link 
+                                 className={classes.link} 
+                                 to="services" 
+                                 smooth='easeInQuad'
+                                 duration={1000}
+                                >
+                                  Services
+                                 </Link> 
+                            </Button>
+                        </Grid>
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-top: 40px;
-  }
-`;
+                        <Grid item={true} xs={12} md={4}>
+                            <Typography className={classes.title}>Contact Us</Typography>
+                            <Divider variant="fullWidth" className={classes.divider}/>
+                            <Typography
+                                gutterBottom={true}
+                                className={classes.location}
+                                variant="body1">
+                                Tarkwa, Western Region Ghana Digital Address
+                            </Typography>
+                            <Typography
+                                gutterBottom={true}
+                                className={classes.location}
+                                variant="body1">
+                                P.O Box 19540 Accra North Ghana
+                            </Typography>
+                            <Typography
+                                gutterBottom={true}
+                                className={classes.location}
+                                variant="body1">
+                                +233 244132705 | +233 264132705
+                            </Typography>
+                            <Typography
+                                gutterBottom={true}
+                                className={classes.location}
+                                variant="body1">
+                                joseph.wilson-sey@jaseyminingservices.com | jaseyminingservices@gmail.com
+                            </Typography>
+                        </Grid>
 
-const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.primary};
-  padding: 32px 0;
-`;
-
-const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.regular};
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
-
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
-`;
-
-const StyledContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    flex-direction: column;
-    text-align: center;
-  }
-`;
+                        <Grid item={true} xs={12} md={4}>
+                            <Typography className={classes.title}>Careers</Typography>
+                            <Divider variant="fullWidth" className={classes.divider}/>
+                            <Typography
+                                className={classes.location}
+                                gutterBottom={true}
+                                variant="body1">
+                                Presently, there are no employment opportunities. However, we believe in working with brilliant
+                                minds seeking to support our company's objectives and mission. Kindly send us your profile and
+                                contact details, and we will reach you as and when opportunities arise. Thank you.
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
+            <div className={classes.copyright}>
+                <Container>
+                    <Typography variant="body1" align="center">
+                        Copyright &copy; 2015- 2020 All rights reserved | This site was developed by <span className="text-success">Sterde</span>
+                    </Typography>
+                </Container>
+            </div>
+        </div>
+    
+    )
+}
 
 export default Footer;

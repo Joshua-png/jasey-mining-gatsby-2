@@ -34,30 +34,30 @@ const DesktopHeader = () => {
                 fontStyle: "italic",
                 textShadow: '15px 15px 2px #cccccc'
             },
-            // up: {
-            //     color: "white",
-            // },
-            // down: {
-            //     color: "black"
-            // },
             link: {
                 textDecoration: "none",
                 color: "green",
                 textTransform: "uppercase",
                 width: "100%",
+                '&:active':{
+                    color:'orange'
+                },
                 '&:hover': {
                     color: "green",
                 }
             },
             green:{
                 color:"green",
+                '&:active':{
+                    color:'orange'
+                },
                 '&:hover':{
                     color:'orange',
                     textDecoration: 'none',
                 }
             },
             orange:{
-                color:'red !important',
+                color:'orange !important',
             },
             button: {
                 backgroundColor: "transparent",
@@ -83,25 +83,13 @@ const DesktopHeader = () => {
 
     const classes = useStyles();
 
-    // const {path} = useRouteMatch();
-//active,
-    // const [ setActive] = useState("");
-
-    // const handleLinkClicked = (event, link) => {
-    //     setActive(link);
-    // }
-
-    // useEffect(() => {
-    //     setActive(path);
-    // }, [path])
-
     return (       
         <Toolbar >
             <Grid container={true} justify="space-around" alignItems="center">
                 <Grid item={true} lg={3} container={true} >
                         <Link
                             className={`${classes.brand}`}
-                              to="/">
+                              to="home">
                             <img
                                 width={50}
                                 height={50}
@@ -127,9 +115,11 @@ const DesktopHeader = () => {
                            <strong>     
                                <Link 
                                  className={classes.green} 
+                                 activeClass={classes.orange}
                                  to="home" 
                                  smooth='easeInQuad'
                                  duration={1000}
+                                 spy={true}
                                >
                                    Home
                                </Link> 
@@ -146,13 +136,14 @@ const DesktopHeader = () => {
                             <strong className="nav-item" style={styles}>
                                <Link 
                                  className={classes.green} 
+                                 activeClass={classes.orange}
                                  to="about-us" 
                                  smooth='easeInQuad'
                                  duration={1000}
+                                 spy={true}
                                >
                                    About Us
                                </Link> 
-                               {/* <a href="#about" className={classes.green}>About Us</a> */}
                             </strong>
                         </Button>
                             
@@ -164,17 +155,16 @@ const DesktopHeader = () => {
                             variant="text"
                             size="small">
                             <strong className="nav-item" style={styles}>
-                            <Link 
-                                className={classes.green} 
-                                activeClass="orange"
-                                to="gallery" 
-                                smooth='easeInQuad' 
-                                duration={1000}
-                                spy={true}
-                            >
-                                Gallery
-                            </Link> 
-                               {/* <a href="#section_2" className={classes.green}>Gallery</a> */}
+                                <Link 
+                                    className={classes.green} 
+                                    activeClass={classes.orange}
+                                    to="gallery" 
+                                    smooth='easeInQuad' 
+                                    duration={1000}
+                                    spy={true}
+                                >
+                                    Gallery
+                                </Link> 
                             </strong>
                         </Button>
                     </Grid>
@@ -184,14 +174,18 @@ const DesktopHeader = () => {
                             className={classes.button}
                             variant="text"
                             size="small">
-                           <Link 
-                                 className={classes.green} 
-                                 to="services" 
-                                 smooth='easeInQuad'
-                                 duration={1000}
-                               >
-                                  Services
-                            </Link> 
+                           <strong className="nav-item" style={styles}>       
+                                 <Link 
+                                    className={classes.green} 
+                                    activeClass={classes.orange}
+                                    to="services" 
+                                    smooth='easeInQuad'
+                                    duration={1000}
+                                    spy={true}
+                                >
+                                    Services
+                                </Link> 
+                           </strong>    
                         </Button>
                     </Grid>
 
@@ -200,14 +194,18 @@ const DesktopHeader = () => {
                             className={classes.button}
                             variant="text"
                             size="small">
-                           <Link 
-                                 className={classes.green} 
-                                 to="contact-us" 
-                                 smooth='easeInQuad'
-                                 duration={1000}
-                               >
-                                  contact us
-                            </Link> 
+                            <strong className="nav-item" style={styles}>    
+                                <Link 
+                                    className={classes.green} 
+                                    activeClass={classes.orange}
+                                    to="contact-us" 
+                                    smooth='easeInQuad'
+                                    duration={1000}
+                                    spy={true}
+                                >
+                                    contact us
+                                </Link> 
+                            </strong>   
                         </Button>
                     </Grid>
                 </Grid>

@@ -1,5 +1,4 @@
 import React from "react";
-import Scrollspy from 'react-scrollspy';
 import {
     Container,
     Button,
@@ -7,7 +6,7 @@ import {
     Grid,
     Typography
 } from "@material-ui/core";
-import {Link} from "gatsby";
+import {Link} from "react-scroll";
 import {makeStyles} from "@material-ui/styles";
 import {
     Close,
@@ -16,19 +15,20 @@ import {
     Info,
     Photo
 } from "@material-ui/icons";
+import logo from '../../images/logo.jpg'
 
 const DrawerContent = ({handleClose}) => {
-    const styles ={
-            textDecoration: "none",
-            color: "#333333",
-            textTransform: "uppercase",
-            '&:hover': {
-                color: "#333333"
-            },
-            fontSize: 16,
-            fontWeight: 500,
-            listStyle:"none",
-    }
+    // const styles ={
+    //         textDecoration: "none",
+    //         color: "#333333",
+    //         textTransform: "uppercase",
+    //         '&:hover': {
+    //             color: "#333333"
+    //         },
+    //         fontSize: 16,
+    //         fontWeight: 500,
+    //         listStyle:"none",
+    // }
 
     const useStyles = makeStyles(theme => {
         return {
@@ -55,6 +55,9 @@ const DrawerContent = ({handleClose}) => {
             },
             icon: {
                 color: "#018903e0"
+            },
+            orange:{
+                color:"orange"
             },
             button: {
                 paddingTop: 8,
@@ -90,13 +93,6 @@ const DrawerContent = ({handleClose}) => {
     const classes = useStyles();
 
     return (
-    <Scrollspy
-        scrollTargetIds={["section_1"]}
-        offset={100}
-        activeNavClass="is-active"
-        scrollDuration="1000"
-        headerBackground="true"
-    >     
         <Container className={classes.container}>
             <Grid
                 container={true}
@@ -122,7 +118,7 @@ const DrawerContent = ({handleClose}) => {
                     <img
                         alt="Jasey Mining logo"
                         className={classes.logo}
-                        src={`images/logo1.jpg`}/>
+                        src={logo}/>
                 </Grid>
             </Grid>
             <Grid container={true} justify="center">
@@ -139,24 +135,41 @@ const DrawerContent = ({handleClose}) => {
                 <Grid item={true} xs={12}>
                     <Button
                         className={classes.button}
+                        
                         fullWidth={false}
                         size="large"
                         startIcon={<Home className={classes.icon}/>}>
-                        <Link className={classes.link} to="/">
-                            Home
-                        </Link>
+                        <Link 
+                            className={classes.link} 
+                            activeClass={classes.orange}
+                            to="home" 
+                            smooth='easeInQuad'
+                            duration={1000}
+                            spy={true}
+                            
+                        >
+                             Home
+                        </Link> 
                     </Button>
 
                     <Divider className={classes.divider} variant="fullWidth"/>
 
                     <Button
                         className={classes.button}
+                        activeClass={classes.orange}
                         fullWidth={false}
                         size="large"
                         startIcon={<Info className={classes.icon}/>}>
-                        <li style={styles}>
-                            <a href="#section_1" style={{color:'#333333'}}>About Us</a>
-                        </li>
+                        <Link 
+                           className={classes.link} 
+                           activeClass={classes.orange}
+                           to="about-us" 
+                           smooth='easeInQuad'
+                           duration={1000}
+                           spy={true}
+                        >
+                           About Us
+                        </Link> 
                     </Button>
 
                     <Divider className={classes.divider} variant="fullWidth"/>
@@ -166,9 +179,16 @@ const DrawerContent = ({handleClose}) => {
                         fullWidth={false}
                         size="large"
                         startIcon={<Photo className={classes.icon}/>}>
-                        <li style={styles}>
-                            <a href="#section_2" style={{color:'#333333'}}>Gallery</a>
-                        </li>
+                        <Link 
+                           className={classes.link} 
+                           activeClass={classes.orange}
+                           to="gallery" 
+                           smooth='easeInQuad' 
+                           duration={1000}
+                           spy={true}
+                        >
+                           Gallery
+                        </Link> 
                     </Button>
 
                     <Divider className={classes.divider} variant="fullWidth"/>
@@ -178,9 +198,16 @@ const DrawerContent = ({handleClose}) => {
                         fullWidth={false}
                         size="large"
                         startIcon={<ContactPhone className={classes.icon}/>}>
-                        <li style={styles}>
-                            <a href="#section_3" style={{color:'#333333'}}>Services</a>
-                        </li>
+                        <Link 
+                           className={classes.link}
+                           activeClass={classes.orange}
+                           to="services" 
+                           smooth='easeInQuad'
+                           duration={1000}
+                           spy={true}
+                        >
+                           Services
+                        </Link> 
                     </Button>
 
                     <Divider className={classes.divider} variant="fullWidth"/>
@@ -190,15 +217,21 @@ const DrawerContent = ({handleClose}) => {
                         fullWidth={false}
                         size="large"
                         startIcon={<ContactPhone className={classes.icon}/>}>
-                        <li style={styles}>
-                            <a href="#section_4" style={{color:'#333333'}}>Contact</a>
-                        </li>
+                         <Link 
+                            className={classes.link}
+                            activeClass={classes.orange} 
+                            to="contact-us" 
+                            smooth='easeInQuad'
+                            duration={1000}
+                            spy={true}
+                            >
+                               contact us
+                        </Link> 
                     </Button>
                 </Grid>
             </Grid>
 
-        </Container>
-    </Scrollspy>    
+        </Container>   
     )
 }
 
