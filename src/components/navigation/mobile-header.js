@@ -13,13 +13,13 @@ const MobileHeader = ({handleOpen}) => {
         return {
             brand: {
                 fontWeight: "bold",
-                color: "#018903e0"
+                color: "green"
             },
             link: {
                 color: "white"
             },
             menu: {
-                color: "#018903e0"
+                color: "green"
             }
         }
     });
