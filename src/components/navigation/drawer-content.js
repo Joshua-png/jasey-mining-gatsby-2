@@ -135,7 +135,7 @@ const DrawerContent = ({handleClose}) => {
                 <Grid item={true} xs={12}>
                     <Button
                         className={classes.button}
-                        
+                        onClick={() => handleClose()}
                         fullWidth={false}
                         size="large"
                         startIcon={<Home className={classes.icon}/>}>
@@ -146,7 +146,7 @@ const DrawerContent = ({handleClose}) => {
                             smooth='easeInQuad'
                             duration={1000}
                             spy={true}
-                            
+                            onClick= {()=>handleClose()}
                         >
                              Home
                         </Link> 
@@ -159,7 +159,9 @@ const DrawerContent = ({handleClose}) => {
                         activeClass={classes.orange}
                         fullWidth={false}
                         size="large"
+                        onClick={() => handleClose()}
                         startIcon={<Info className={classes.icon}/>}>
+                            
                         <Link 
                            className={classes.link} 
                            activeClass={classes.orange}
@@ -167,6 +169,7 @@ const DrawerContent = ({handleClose}) => {
                            smooth='easeInQuad'
                            duration={1000}
                            spy={true}
+                           onClick= {()=>handleClose()}
                         >
                            About Us
                         </Link> 
@@ -186,6 +189,7 @@ const DrawerContent = ({handleClose}) => {
                            smooth='easeInQuad' 
                            duration={1000}
                            spy={true}
+                           onClick= {()=>handleClose()}
                         >
                            Gallery
                         </Link> 
@@ -205,6 +209,7 @@ const DrawerContent = ({handleClose}) => {
                            smooth='easeInQuad'
                            duration={1000}
                            spy={true}
+                           onClick= {()=>handleClose()}
                         >
                            Services
                         </Link> 
@@ -224,6 +229,7 @@ const DrawerContent = ({handleClose}) => {
                             smooth='easeInQuad'
                             duration={1000}
                             spy={true}
+                            onClick= {()=>handleClose()}
                             >
                                contact us
                         </Link> 
