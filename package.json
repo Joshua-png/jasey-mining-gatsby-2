@@ -1,9 +1,9 @@
 {
   "name": "gatsby-absurd",
   "private": true,
-  "description": "An absurd starter for Gatsby",
+  "description": "A starter for Gatsby",
   "version": "0.1.0",
-  "author": "Ajay NS <ajay.ns@outlook.com>",
+  "author": "Sterde(Richard and Joshua)",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
