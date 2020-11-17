@@ -64,8 +64,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import CloseIcon from '@material-ui/icons/Close';
-import IconButton from '@material-ui/core/IconButton';
 
 export default function Dialogs({text}) {
   const [open, setOpen] = React.useState(false);
@@ -104,11 +102,6 @@ export default function Dialogs({text}) {
       >
         <DialogTitle id="scroll-dialog-title">
            Jasey Mining Service Limited
-           <span style={{float:'right' ,position: 'absolute', top: 10, right:15}}>
-           <IconButton edge="end" color="inherit" onClick={handleClose} aria-label="close">
-              <CloseIcon />
-           </IconButton>
-           </span>
         </DialogTitle>
         <DialogContent dividers={scroll === 'body'}>
           <DialogContentText
