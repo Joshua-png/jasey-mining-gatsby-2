@@ -74,7 +74,7 @@ const DrawerContent = ({handleClose}) => {
                 marginLeft: -15
             },
             closeButton: {
-                backgroundColor: "#018903e0",
+                backgroundColor: "green",
                 color: "white",
                 paddingTop: 4,
                 paddingBottom: 4,
@@ -82,7 +82,7 @@ const DrawerContent = ({handleClose}) => {
                     color: "#777777"
                 }
             }, closeIcon: {
-                color: "#ffffff"
+                color: "white"
             },
             brand: {
                 fontWeight: "bold"
