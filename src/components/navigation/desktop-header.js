@@ -36,28 +36,28 @@ const DesktopHeader = () => {
             },
             link: {
                 textDecoration: "none",
-                color: "green",
+                color: "orange",
                 textTransform: "uppercase",
                 width: "100%",
                 '&:active':{
-                    color:'orange'
+                    color:'green'
                 },
                 '&:hover': {
                     color: "green",
                 }
             },
-            green:{
-                color:"green",
+            orange:{
+                color:"orange",
                 '&:active':{
-                    color:'orange'
+                    color:'green'
                 },
                 '&:hover':{
-                    color:'orange',
+                    color:'green',
                     textDecoration: 'none',
                 }
             },
-            orange:{
-                color:'orange !important',
+            green:{
+                color:'green !important',
             },
             button: {
                 backgroundColor: "transparent",
@@ -114,8 +114,8 @@ const DesktopHeader = () => {
                             size="small">
                            <strong>     
                                <Link 
-                                 className={classes.green} 
-                                 activeClass={classes.orange}
+                                 className={classes.orange} 
+                                 activeClass={classes.green}
                                  to="home" 
                                  smooth='easeInQuad'
                                  duration={1000}
@@ -135,8 +135,8 @@ const DesktopHeader = () => {
                                 
                             <strong className="nav-item" style={styles}>
                                <Link 
-                                 className={classes.green} 
-                                 activeClass={classes.orange}
+                                 className={classes.orange} 
+                                 activeClass={classes.green}
                                  to="about-us" 
                                  smooth='easeInQuad'
                                  duration={1000}
@@ -156,8 +156,8 @@ const DesktopHeader = () => {
                             size="small">
                             <strong className="nav-item" style={styles}>
                                 <Link 
-                                    className={classes.green} 
-                                    activeClass={classes.orange}
+                                    className={classes.orange} 
+                                    activeClass={classes.green}
                                     to="gallery" 
                                     smooth='easeInQuad' 
                                     duration={1000}
@@ -176,8 +176,8 @@ const DesktopHeader = () => {
                             size="small">
                            <strong className="nav-item" style={styles}>       
                                  <Link 
-                                    className={classes.green} 
-                                    activeClass={classes.orange}
+                                    className={classes.orange} 
+                                    activeClass={classes.green}
                                     to="services" 
                                     smooth='easeInQuad'
                                     duration={1000}
@@ -196,8 +196,8 @@ const DesktopHeader = () => {
                             size="small">
                             <strong className="nav-item" style={styles}>    
                                 <Link 
-                                    className={classes.green} 
-                                    activeClass={classes.orange}
+                                    className={classes.orange} 
+                                    activeClass={classes.green}
                                     to="contact-us" 
                                     smooth='easeInQuad'
                                     duration={1000}
